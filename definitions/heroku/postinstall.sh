@@ -24,24 +24,24 @@ apt-get -y install nfs-common
 
 # Install Ruby from source in /opt so that users of Vagrant
 # can install their own Rubies using packages or however.
-wget http://ftp.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p247.tar.bz2
-tar jxf ruby-2.0.0-p247.tar.bz2
-cd ruby-2.0.0-p247
+wget http://ftp.ruby-lang.org/pub/ruby/2.1/ruby-2.1.1.tar.bz2
+tar jxf ruby-2.1.1.tar.bz2
+cd ruby-2.1.1
 ./configure --prefix=/opt/ruby
 make
 make install
 cd ..
-rm -rf ruby-2.0.0-p247*
+rm -rf ruby-2.1.1*
 chown -R root:admin /opt/ruby
 chmod -R g+w /opt/ruby
 
-# Install RubyGems 2.0.3
-wget http://production.cf.rubygems.org/rubygems/rubygems-2.0.3.tgz
-tar xzf rubygems-2.0.3.tgz
-cd rubygems-2.0.3
+# Install RubyGems 2.2.2
+wget http://production.cf.rubygems.org/rubygems/rubygems-2.2.2.tgz
+tar xzf rubygems-2.2.2.tgz
+cd rubygems-2.2.2
 /opt/ruby/bin/ruby setup.rb
 cd ..
-rm -rf rubygems-2.0.3*
+rm -rf rubygems-2.2.2*
 
 # Installing chef & Puppet
 /opt/ruby/bin/gem install chef --no-ri --no-rdoc
