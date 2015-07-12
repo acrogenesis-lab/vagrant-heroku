@@ -74,7 +74,7 @@ make install
 cd ..
 rm -rf uuid-1.6.1
 
-# Install PostgreSQL 9.2.4
+# Install PostgreSQL 9.3.3
 wget http://ftp.postgresql.org/pub/source/v9.3.3/postgresql-9.3.3.tar.bz2
 tar jxf postgresql-9.3.3.tar.bz2
 cd postgresql-9.3.3
